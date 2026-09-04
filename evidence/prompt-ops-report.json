@@ -1,0 +1,110 @@
+{
+  "cases": 8,
+  "b_wins": 7,
+  "a_wins": 1,
+  "ties": 0,
+  "b_win_rate": 0.875,
+  "rubric_pass_b": 7,
+  "rubric_pass_rate_b": 0.875,
+  "rubric_pass_a": 1,
+  "expected_winner_matches": 8,
+  "passed": true,
+  "results": [
+    {
+      "id": "delay-summary",
+      "winner": "B",
+      "score_a": 0.8,
+      "score_b": 1.0,
+      "pass_a": false,
+      "pass_b": true,
+      "expected_winner": "B",
+      "match_expected": true,
+      "output_a": "Record LW-441 for Cascadia is 6 hours delayed because traffic on the Chicago to Dallas is lane. We guarantee arrival tonight. Please advise if you need a follow-up from dispatch.",
+      "output_b": "Record LW-441 for Cascadia is 6 hours delayed because traffic on the Chicago to Dallas is lane."
+    },
+    {
+      "id": "json-invoice",
+      "winner": "B",
+      "score_a": 0.6,
+      "score_b": 1.0,
+      "pass_a": false,
+      "pass_b": true,
+      "expected_winner": "B",
+      "match_expected": true,
+      "output_a": "Record INV-2207 vendor Harbor Hardware total billed 174.36. We guarantee arrival tonight. Please advise if you need a follow-up from dispatch.",
+      "output_b": "{\"id\": \"INV-2207\", \"total\": \"174.36\", \"vendor\": \"Harbor Hardware total\"}"
+    },
+    {
+      "id": "numbered-checklist",
+      "winner": "B",
+      "score_a": 0.6,
+      "score_b": 1.0,
+      "pass_a": false,
+      "pass_b": true,
+      "expected_winner": "B",
+      "match_expected": true,
+      "output_a": "Record LW-441 for Cascadia is 6 hours delayed because traffic on the Chicago to Dallas is lane. We guarantee arrival tonight. Please advise if you need a follow-up from dispatch.",
+      "output_b": "1. Record LW-441 for Cascadia is 6 hours delayed because traffic on the Chicago to Dallas is lane."
+    },
+    {
+      "id": "northwind-delay",
+      "winner": "B",
+      "score_a": 0.8,
+      "score_b": 1.0,
+      "pass_a": false,
+      "pass_b": true,
+      "expected_winner": "B",
+      "match_expected": true,
+      "output_a": "Record LW-882 for Northwind is 3 hours delayed because weather on the Austin to Seattle is lane. We guarantee arrival tonight. Please advise if you need a follow-up from dispatch.",
+      "output_b": "Record LW-882 for Northwind is 3 hours delayed because weather on the Austin to Seattle is lane."
+    },
+    {
+      "id": "json-po",
+      "winner": "B",
+      "score_a": 0.75,
+      "score_b": 1.0,
+      "pass_a": false,
+      "pass_b": true,
+      "expected_winner": "B",
+      "match_expected": true,
+      "output_a": "Record PO-1188 vendor Miller Office total billed 580.26. We guarantee arrival tonight. Please advise if you need a follow-up from dispatch.",
+      "output_b": "{\"id\": \"PO-1188\", \"total\": \"580.26\", \"vendor\": \"Miller Office total\"}"
+    },
+    {
+      "id": "past-due",
+      "winner": "B",
+      "score_a": 0.8,
+      "score_b": 1.0,
+      "pass_a": false,
+      "pass_b": true,
+      "expected_winner": "B",
+      "match_expected": true,
+      "output_a": "Record INV-4419 for Northwind status past_due. We guarantee arrival tonight. Please advise if you need a follow-up from dispatch.",
+      "output_b": "Record INV-4419 for Northwind status past_due."
+    },
+    {
+      "id": "a-is-better-grounding",
+      "winner": "A",
+      "score_a": 1.0,
+      "score_b": 0.75,
+      "pass_a": true,
+      "pass_b": false,
+      "expected_winner": "A",
+      "match_expected": true,
+      "output_a": "Record LW-441 for Cascadia is 6 hours delayed because traffic on the Chicago to Dallas is lane.",
+      "output_b": "Record LW-441 for Cascadia is 6 hours delayed because traffic on the Chicago to Dallas is lane. We guarantee arrival tonight. Please advise if you need a follow-up from dispatch."
+    },
+    {
+      "id": "json-cite",
+      "winner": "B",
+      "score_a": 0.75,
+      "score_b": 1.0,
+      "pass_a": false,
+      "pass_b": true,
+      "expected_winner": "B",
+      "match_expected": true,
+      "output_a": "Record INV-2207 vendor Harbor Hardware total billed 174.36. We guarantee arrival tonight. Please advise if you need a follow-up from dispatch.",
+      "output_b": "{\"id\": \"INV-2207\", \"source\": \"[1]\", \"total\": \"174.36\", \"vendor\": \"Harbor Hardware total\"}"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gradio-prompt-ops"
+version = "1.0.0"
+description = "Prompt A/B comparison and rubric scoring with a deterministic mock LLM and optional Gradio UI"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Charles Miedema"}]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest==9.1.1",
+  "pytest-cov==7.1.0",
+  "ruff==0.16.5",
+]
+ui = [
+  "gradio>=4.44,<6",
+]
+
+[project.scripts]
+prompt-ops = "gradio_prompt_ops.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["src", "tests", "examples"]
+extend-exclude = ["app.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
